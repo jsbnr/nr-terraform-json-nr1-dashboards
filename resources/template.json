@@ -1,0 +1,86 @@
+{
+    "name": "${DASHBOARD_NAME}",
+    "description": null,
+    "permissions": "PUBLIC_READ_WRITE",
+    "pages": [
+      {
+        "name": "First Page",
+        "description": null,
+        "widgets": [
+          {
+            "visualization": {
+              "id": "viz.line"
+            },
+            "layout": {
+              "column": 1,
+              "row": 1,
+              "height": 3,
+              "width": 4
+            },
+            "title": "Example Timeseries",
+            "rawConfiguration": {
+              "dataFormatters": [],
+              "legend": {
+                "enabled": true
+              },
+              "nrqlQueries": [
+                {
+                  "accountId": ${ACCOUNT_ID},
+                  "query": "SELECT count(*) from Public_APICall timeseries"
+                }
+              ],
+              "yAxisLeft": {
+                "zero": true
+              }
+            },
+            "linkedEntityGuids": null
+          },
+          {
+            "visualization": {
+              "id": "viz.billboard"
+            },
+            "layout": {
+              "column": 5,
+              "row": 1,
+              "height": 3,
+              "width": 4
+            },
+            "title": "Billboard",
+            "rawConfiguration": {
+              "dataFormatters": [],
+              "nrqlQueries": [
+                {
+                  "accountId": ${ACCOUNT_ID},
+                  "query": "SELECT count(*) from Public_APICall facet api limit 6"
+                }
+              ],
+              "thresholds": []
+            },
+            "linkedEntityGuids": null
+          }
+        ]
+      },
+      {
+        "name": "Second Page",
+        "description": null,
+        "widgets": [
+          {
+            "visualization": {
+              "id": "viz.markdown"
+            },
+            "layout": {
+              "column": 1,
+              "row": 1,
+              "height": 3,
+              "width": 4
+            },
+            "title": "",
+            "rawConfiguration": {
+              "text": "Just an example second page"
+            },
+            "linkedEntityGuids": null
+          }
+        ]
+      }
+    ]
+  }
