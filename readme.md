@@ -19,7 +19,7 @@ module "json_dash1" {
 ```
 
 ## First time installation
-The module uses a nodejs script to perfroma the update. In the module directory `modues/json_nr1_dashboard` run `npm install` to install the dependencies.
+The module uses a nodejs script to perform the update. In the module directory `modues/json_nr1_dashboard` run `npm install` to install the dependencies.
 
 ## Getting a dashboard template
 Existing dashboard JSON can be aquired using the "Copy JSON to clipboard" button on a dashboard. Alternatively it can be retrieved via the API. Heres a helper script for that: modules/json_nr1_dashboard/get_dash.sh
