@@ -1,5 +1,7 @@
 # Terraform New Relic NR1 Dashboards with JSON
 
+Note: this solution is now deprecated in favour of the new built in newrelic_dashboard_json resource. Example [here](https://github.com/jsbnr/nr-terraform-json-dashboards-native)
+
 Note: You may want to explore [this alternative solution.](https://github.com/jsbnr/nr-terraform-graphql-json-dashboards)
 
 ---
